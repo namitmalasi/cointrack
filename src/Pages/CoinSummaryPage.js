@@ -4,7 +4,7 @@ import AddCoin from "../components/AddCoin";
 
 const CoinSummaryPage = () => {
   return (
-    <div>
+    <div className="coinsummary shadow border p-2 rounded mt-2 bg-light">
       <AddCoin />
       <CoinList />
     </div>

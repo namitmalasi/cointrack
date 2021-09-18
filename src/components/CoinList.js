@@ -7,7 +7,7 @@ const CoinList = () => {
   const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const { watchList } = useContext(WatchListContext);
+  const { watchList, deleteCoin } = useContext(WatchListContext);
   console.log(watchList);
 
   useEffect(() => {
@@ -23,8 +23,12 @@ const CoinList = () => {
       setLoading(false);
     };
 
-    fetchData();
-  }, []);
+    if (watchList.length > 0) {
+      fetchData();
+    } else {
+      setCoins([]);
+    }
+  }, [watchList]);
 
   const renderCoins = () => {
     if (loading) {
@@ -34,7 +38,7 @@ const CoinList = () => {
     return (
       <ul className="coinlist list-group mt-2">
         {coins.map((coin) => {
-          return <Coin key={coin.id} coin={coin} />;
+          return <Coin key={coin.id} coin={coin} deleteCoin={deleteCoin} />;
         })}
       </ul>
     );
