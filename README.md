@@ -16,5 +16,5 @@ CoinTrack is a cryptocurrency tracker application, where you can :
 
 # Links
 
-- Demo live : [https://namitmalasi.github.io/cointrack/](https://namitmalasi.github.io/cointrack/)
+- Demo live : [CoinTrack](https://pedantic-wright-767bd2.netlify.app/)
 - Api used : [Coin Gecko](https://www.coingecko.com/api/documentations/v3)
